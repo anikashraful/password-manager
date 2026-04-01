@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Store - Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Password Store</h1>
+            <button id="logoutBtn" class="logout-btn">Logout</button>
+        </header>
+        
+        <div class="main-content">
+            <div class="add-password">
+                <h2>Add New Password</h2>
+                <form id="addPasswordForm">
+                    <div class="form-group">
+                        <label for="site_name">Site Name:</label>
+                        <input type="text" id="site_name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="site_url">Site URL:</label>
+                        <input type="url" id="site_url">
+                    </div>
+                    <div class="form-group">
+                        <label for="site_username">Username:</label>
+                        <input type="text" id="site_username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="site_password">Password:</label>
+                        <input type="password" id="site_password" required>
+                    </div>
+                    <button type="submit">Save Password</button>
+                </form>
+            </div>
+            
+            <div class="password-list">
+                <h2>Your Passwords</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Search sites...">
+                </div>
+                <div id="passwordContainer"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
